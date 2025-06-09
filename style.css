@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Amiri', serif;
+  background: linear-gradient(to top, #1d2b64, #f8cdda);
+  color: white;
+  text-align: center;
+  height: 100vh;
+  overflow-x: hidden;
+}
+.container {
+  padding: 60px 20px;
+}
+h1.greeting {
+  font-size: 3em;
+  margin: 20px 0;
+  font-family: 'Great Vibes', cursive;
+  animation: fadeIn 2s ease-in-out;
+}
+.message {
+  font-size: 1.3em;
+  max-width: 700px;
+  margin: auto;
+  padding: 10px;
+  line-height: 1.6;
+}
+button {
+  background: #f8cdda;
+  border: none;
+  color: #1d2b64;
+  padding: 12px 24px;
+  font-size: 1em;
+  border-radius: 25px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+button:hover {
+  background: #ffe6f0;
+}
+.moon {
+  background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Star_and_Crescent.svg/2048px-Star_and_Crescent.svg.png') no-repeat center;
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px;
+  animation: spin 20s linear infinite;
+}
+@keyframes spin {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+.confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  pointer-events: none;
+  overflow: visible;
+  z-index: 9999;
+}
+.confetti-piece {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: gold;
+  animation: fall 3s infinite;
+}
+@keyframes fall {
+  0% {
+    transform: translateY(-100px) rotate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
